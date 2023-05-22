@@ -1,0 +1,11 @@
+<h1>Result</h1>
+<%= @alpha %>
+<% if @all.include? @answer%>
+  <% if @alpha.include? @answer.split(//)%>
+    <p>Congratulations! <%= @answer %> is a valid English word!</p>
+  <%else%>
+  <p>Sorry but <%=@answer%> can't be built out of <%= @alphs %></p>
+  <%end%>
+<% else %>
+  <p>Sorry but <%= @answer %> does not seem to be a valid English word...</p>
+<% end %>
